@@ -9,6 +9,15 @@ public class Solution08 {
         p2.work(); // Programmer
         Programmer p3 = new JavaFullStack(55, "React");
         p3.work(); // Programmer
+
+        if (p1 instanceof JavaFullStack) {
+            System.out.println("p1은 자바풀스택!");
+        }
+        else if (p2 instanceof JavaFullStack) {
+            System.out.println("p2은 자바풀스택!");
+        } else if (p3 instanceof JavaFullStack) {
+            System.out.println("p3은 자바풀스택!");
+        }
     }
 }
 
