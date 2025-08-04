@@ -5,6 +5,19 @@ public class Solution08 {
     public static void main(String[] args) {
         Programmer p1 = new Programmer("자바", 33);
         p1.work();
+        Programmer p2 = new JavaProgrammer(44);
+        p2.work(); // Programmer
+    }
+}
+
+// extends
+class JavaProgrammer extends Programmer {
+    JavaProgrammer(int age) { // 매개변수를 전달 받아서...
+        // Programmer - JavaProgrammer => 상속
+        // (부모클래스)    (자식클래스)
+        // (상위클래스)    (하위클래스)
+        // super         this
+        super("자바", age); // super() 생성자 -> Programmer 생성자
     }
 }
 
