@@ -10,7 +10,11 @@ public class GeminiVer3 {
         // -> 객체 메서드, static 메서드
         // throw, throws, return을 적절하게 사용해서. 좀 더 '프로그램'스럽게
 
-        Chatbot chatbot = new RoleChatbot();
+        // https://aistudio.google.com/apikey
+        // Main 메서드가 있는 클래스 파일 > 매개변수를 사용하여 실행
+        // 환경변수 : GEMINI_API_KEY=??????????
+        String apiKey = System.getenv("GEMINI_API_KEY");
+        Chatbot chatbot = new RoleChatbot(apiKey);
         Scanner sc = new Scanner(System.in);
         while (true) {
             System.out.print("질문을 입력하세요 : ");
