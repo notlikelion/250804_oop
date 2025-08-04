@@ -18,7 +18,7 @@ public abstract class Chatbot implements IGemini {
     @Override
     public String chat(String message) throws Exception {
         // chat -> apiKey.
-        System.out.println(apiKey);
+//        System.out.println(apiKey);
         // 1. 요청 받은 메시지를 다듬거나 추가. Role, 가이드를 추가
         String templateMessage = handleMessage(message);
         // 2. GEMINI 통신
