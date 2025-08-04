@@ -18,6 +18,7 @@ public class Solution01 {
         // 꼭 변수에 들어갈 필요는 없음. 그래서 아예 변수 할당이 아닌 메서드의 경우에는 'void'
         // static -> 클래스를 통해서 객체를 만들지 않아도 클래스 관련해서 static 메모리하는 영역에 저장되어 있는 메서드. (별도의 메모리에 이미 탑재 - 저장되어 있다)
         Animal animal = new Animal(); // 인스턴스 => 클래스로 만들어진 객체
+        // 메모리 -> 생성자
         System.out.println(animal); // 주소값 -> 어떤 클래스를 통해 만들어진 건지 -> 주소값...
         // c, c++ 구조체와 유사
         // 변수와 메서드의 묶음
@@ -40,6 +41,8 @@ public class Solution01 {
         System.out.println(animal.name);
         animal.weight = 5;
         System.out.println(animal.weight);
+        System.out.println(animal); // 계속 주소값
+        animal.bark();
     }
 }
 
@@ -47,4 +50,7 @@ class Animal {
     String name; // 변수 -> class의 멤버 -> 멤버변수
     int weight;
     // 멤버변수는 자동으로 할당이 됩니다 (기본값)
+    void bark() {
+        System.out.println("멍멍!");
+    }
 }
