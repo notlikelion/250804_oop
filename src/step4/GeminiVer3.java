@@ -14,8 +14,11 @@ public class GeminiVer3 {
         // Main 메서드가 있는 클래스 파일 > 매개변수를 사용하여 실행
         // 환경변수 : GEMINI_API_KEY=??????????
         String apiKey = System.getenv("GEMINI_API_KEY");
-        Chatbot chatbot = new RoleChatbot(apiKey);
+//        Chatbot chatbot = new RoleChatbot(apiKey);
+//        Chatbot chatbot = new RoleChatbot(apiKey, "100자 이내로, MBTI가 INTJ인 사람처럼 대답해줘.");
         Scanner sc = new Scanner(System.in);
+        System.out.print("당신과 상담할 사람을 서술해보세요 : ");
+        Chatbot chatbot = new RoleChatbot(apiKey, sc.nextLine() + "라고 설명된 사람이 대답하는 듯이 해줘.");
         while (true) {
             System.out.print("질문을 입력하세요 : ");
             String question = sc.nextLine();
