@@ -18,8 +18,9 @@ public abstract class Chatbot implements IGemini {
         // 2. GEMINI 통신
         String geminiResponse = callGemini(apiKey, templateMessage);
         // 3. 응답 받는 텍스트를 다듬는.
-        String changedText = changeResult(geminiResponse);
-        return "챗챗";
+        // String changedText = changeResult(geminiResponse);
+        //return changedText;
+        return changeResult(geminiResponse);
     }
 
     private String handleMessage(String message) {
