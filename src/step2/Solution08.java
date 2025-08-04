@@ -7,10 +7,21 @@ public class Solution08 {
         p1.work();
         Programmer p2 = new JavaProgrammer(44);
         p2.work(); // Programmer
+        Programmer p3 = new JavaFullStack(55, "React");
+        p3.work(); // Programmer
     }
 }
 
-// extends
+class JavaFullStack extends JavaProgrammer {
+    String frontEnd;
+    JavaFullStack(int age, String frontEnd) {
+        super(age);
+        this.frontEnd = frontEnd;
+    }
+}
+
+// extends -> 다중상속이 안된다 -> extends에 여러개를 둘 수 없다
+// Human -> Worker -> Programmer -> JavaProgrammer
 class JavaProgrammer extends Programmer {
     JavaProgrammer(int age) { // 매개변수를 전달 받아서...
         // Programmer - JavaProgrammer => 상속
